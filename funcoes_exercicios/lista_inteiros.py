@@ -37,4 +37,4 @@ for i in lista:
         first = 0
         second = 0
         if j == first:
-            
+            pass
