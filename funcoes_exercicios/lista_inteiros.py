@@ -28,13 +28,19 @@ lista = [
     [10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
 ]
 
-tamanho = 1
+def search_duplicado(lista_inteiros):
+    # return lista_inteiros
+    numeros_checados = set()
+    first_duplicado = -1
 
-for i in lista:
-    print (f' Lista número {tamanho}:  {i}')
-    tamanho +=1
-    for j in i:
-        first = 0
-        second = 0
-        if j == first:
-            pass
+    for numero in lista_inteiros:
+        if numero in numeros_checados:
+            first_duplicado = numero
+            break
+
+        numeros_checados.add(numero)
+    
+    return first_duplicado
+
+for lista in lista:
+    print(lista, search_duplicado(lista))
